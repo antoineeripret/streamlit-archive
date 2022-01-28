@@ -19,8 +19,8 @@ Get saved pages for a specific domain from Wayback Machine. The application can 
 
 #input from user 
 domain = st.text_input('Domain (e.g. liligo.fr) ')
-from_date = st.text_input('Date FROM (YYY-MM-DD)')
-to_date = st.text_input('Date TO (YYY-MM-DD)')
+from_date = st.date_input('Date FROM (YYY-MM-DD)')
+to_date = st.date_input('Date TO (YYY-MM-DD)')
 extensions_to_exclude = st.multiselect('File extensions to exclude (you can pick several)', ['JS','PNG','JPG','CSS','MP4'])
 parameters = st.checkbox('Keep URLs with parameters as separated entries?')
 
