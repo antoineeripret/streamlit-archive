@@ -37,7 +37,8 @@ if st.button('Extract data'):
   'to': to_date, 
   'limit':100000
 }
-    r = requests.get('http://web.archive.org/cdx/search/cdx', params=params)
+    headers = {'User-Agent':'download-application-streamlit'}
+    r = requests.get('http://web.archive.org/cdx/search/cdx', params=params, headers=headers)
     csv = pd.read_csv(StringIO(r.text), sep=' ')
     csv.loc[len(csv)] = csv.columns.tolist()
     csv.columns = ['urlkey','timestamp','url','type','rc','digest','length']
