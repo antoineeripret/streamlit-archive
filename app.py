@@ -17,11 +17,13 @@ Get saved pages for a specific domain from Wayback Machine. The application can 
 
 ''')
 
+#file extensions 
+file_ext = ['AAC','ABW','ARC','AVIF','AVI','AZW','BIN','BMP','BZ','BZ2','CDA','CSH','CSS','CSV','DOC','DOCX','EOT','EPUB','GZ','GIF','HTM','HTML','ICO','ICS','JAR','JPEG','JPG','JS','JSON','JSONLD','MID','MIDI','MJS','MP3','MP4','MPEG','MPKG','ODP','ODS','ODT','OGA','OGV','OGX','OPUS','OTF','PNG','PDF','PHP','PPT','PPTX','RAR','RTF','SH','SVG','TAR','TIF','TIFF','TS','TTF','TXT','VSD','WAV','WEBA','WEBM','WEBP','WOFF','WOFF2','XHTML','XLS','XLSX','XML','XUL','ZIP','3GP','3G2','7Z']
 #input from user 
 domain = st.text_input('Domain (e.g. liligo.fr) ')
 from_date = st.date_input('Date FROM (YYY-MM-DD)')
 to_date = st.date_input('Date TO (YYY-MM-DD)')
-extensions_to_exclude = st.multiselect('File extensions to exclude (you can pick several)', ['JS','PNG','JPG','CSS','MP4'])
+extensions_to_exclude = st.multiselect('File extensions to exclude (you can pick several)', file_ext)
 parameters = st.checkbox('Keep URLs with parameters as separated entries?')
 
 if st.button('Extract data'):
