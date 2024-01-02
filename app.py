@@ -31,7 +31,8 @@ if st.button('Extract data'):
 
     extensions_to_exclude = ['\.'+element.lower() for element in extensions_to_exclude]
     from_date_str = from_date.strftime("%Y%m%d")
-    to_date_str = from_date.strftime("%Y%m%d")
+    st.write(from_date_str
+    to_date_str = to_date.strftime("%Y%m%d")
     
     params = {
   'url': domain,
