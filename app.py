@@ -30,13 +30,16 @@ if st.button('Extract data'):
     st.write('Extraction can take a moment based on the number of URLs available in the API.')
 
     extensions_to_exclude = ['\.'+element.lower() for element in extensions_to_exclude]
+    from_date_str = from_date.strftime("%Y%m%d")
+    to_date_str = from_date.strftime("%Y%m%d")
+    
     params = {
   'url': domain,
   'collapse':'urlkey',
   'matchType':'prefix',
   'output': 'txt',
-  'from': from_date,
-  'to': to_date, 
+  'from': from_date_str,
+  'to': to_date_str, 
   'limit':100000
 }
     headers = {'User-Agent':'download-application-streamlit'}
