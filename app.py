@@ -11,7 +11,7 @@ def convert_df(df):
 #Introduction 
 st.title('Download data from archive.org')
 st.markdown(
-'''Archive.org application done by [Antoine Eripret](https://twitter.com/antoineripret). You can report a bug or an issue in [Github](https://github.com/antoineeripret/streamlit-archive).
+'''Archive.org application done by [Antoine Eripret](https://www.aeripret.com/). You can report a bug or an issue in [Github](https://github.com/antoineeripret/streamlit-archive).
 
 Get saved pages for a specific domain from Wayback Machine. The application can get **up to 100.000 URLs** using archive.org's API. **This limit is applied on the request sent to archive.org: the output file can be smaller based on the condition you choose to apply below**. 
 
